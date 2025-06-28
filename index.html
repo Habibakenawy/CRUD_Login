@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <style>
+    #email_login::placeholder {
+      color: lightgray;
+    }
+      #password_login::placeholder {
+      color: lightgray;
+    }
+  </style>
+  </head>
+  <body style="background-color: #24353f">
+    <div
+      style="color: #24353f"
+      class="d-flex justify-content-center container shadow-lg p-3 mb-5 rounded mt-5"
+    >
+      <div class="form w-100 p-5 text-center">
+        <h1 style="color: #17a2b8; font-size: 3rem" class="mb-3">
+          Smart Login System
+        </h1>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control bg-transparent text-white"
+            id="email_login"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="password"
+            id="password_login"
+            class="form-control bg-transparent text-white"
+            aria-describedby="passwordHelpBlock"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-info mb-3 w-100">
+            Login
+          </button>
+          <p class="text-white">Don’t have an account? <a href="./pages/sineup.html" class="text-decoration-none text-white">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
