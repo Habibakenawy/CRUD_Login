@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>home</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-<body>
+<body >
+ <nav class="navbar"  style="background-color: #24353f" >
+  <div class="container">
+    <a class="navbar-brand text-white">Smart Login</a>
+    <div class="form d-flex" >
+      <button class="btn btn-outline-success" onclick="logOut()">Log out</button>
+    </div>
+  </div>
+</nav>
+<section   style="background-color: #24353f"  class="d-flex justify-content-center align-items-center vh-100" >
+    <div
+      style="background-color: #24353f"
+      class="w-50 shadow-lg p-3 mb-5 rounded mt-5 text-center"
+      id="home"
+    > 
+     
+    </div>
+    </section>
+     <script>
+    function displayData() {
+      const currentUser = localStorage.getItem("currentUser");
+      const nameHome = document.getElementById("home");
+
+      if (currentUser && nameHome) {
+        nameHome.innerHTML = `
+          <h1 style="color: #17a2b8; font-size: 3rem" class="mb-3">
+            Welcome ${currentUser}
+          </h1>`;
+      } else {
+        console.log("User not found or element missing");
+      }
+    }
+
+    // Call displayData on page load
+    displayData();
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
